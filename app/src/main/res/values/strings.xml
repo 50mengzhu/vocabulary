@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Vocabulary</string>
+    <string name="qq_header_reset">下拉收藏</string>
+    <string name="qq_header_pull">下拉收藏</string>
+    <string name="qq_header_pull_over">释放立即收藏</string>
+    <string name="qq_header_refreshing">正在收藏...</string>
+    <string name="qq_header_completed">收藏成功</string>
+</resources>
