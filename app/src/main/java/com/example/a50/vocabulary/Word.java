@@ -8,19 +8,33 @@ import java.io.Serializable;
 
 public class Word implements Serializable {
     private String vocabulary;
+    private String translate;
     private String sentence;
     private boolean flag;
 
     public Word(String vocabulary){
         this.vocabulary = vocabulary;
         this.sentence = "";
+        this.translate = "this vocabulary has not an translate yet";
         this.flag = false;
     }
 
     public Word(String vocabulary, String sentence){
         this.vocabulary = vocabulary;
         this.sentence = sentence;
+        this.translate = "this vocabulary has not an translate yet";
         this.flag = false;
+    }
+
+    public Word(String vocabulary, String sentence, String translate){
+        this.vocabulary = vocabulary;
+        this.sentence = sentence;
+        this.translate = translate;
+        this.flag = false;
+    }
+
+    public String getTranslate() {
+        return this.translate;
     }
 
     public String getVocabulary() {

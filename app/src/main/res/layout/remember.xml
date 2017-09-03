@@ -4,112 +4,132 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    
 
-    <RelativeLayout
-        android:id="@+id/index"
-        android:layout_centerInParent="true"
+    <ImageButton
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/addItem"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="2dp"
+        android:background="@drawable/circle"
+        android:src="@drawable/add"
+        android:stateListAnimator="@drawable/animator"
+        />
 
-        <com.example.a50.vocabulary.RefreshLayout
-            android:layout_centerInParent="true"
-            android:layout_width="250dp"
-            android:layout_height="350dp"
-            android:background="@drawable/shadow"
-            android:layout_marginTop="15dp"
-            android:id="@+id/wordCardEn"
-            >
+
+    <com.example.a50.vocabulary.MyViewPager
+        android:id="@+id/indexViewPager"
+        android:layout_width="250dp"
+        android:layout_height="350dp"
+        android:layout_centerInParent="true">
+
+    </com.example.a50.vocabulary.MyViewPager>
 
 
-            <!--<RelativeLayout-->
-            <!--android:id="@+id/index"-->
+
+    <!--version 1的版本被删掉的-->
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/index"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<com.example.a50.vocabulary.RefreshLayout-->
             <!--android:layout_centerInParent="true"-->
+            <!--android:layout_width="250dp"-->
+            <!--android:layout_height="350dp"-->
+            <!--android:background="@drawable/shadow"-->
             <!--android:layout_marginTop="15dp"-->
-            <!--android:layout_below="@id/RememberTitle"-->
-            <!--android:gravity="center"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:background="@drawable/shadow">-->
-
-            <!--英语单词-->
-            <LinearLayout
-                android:layout_centerHorizontal="true"
-                android:visibility="visible"
-                android:layout_width="250dp"
-                android:layout_height="350dp"
-                android:orientation="vertical">
-
-                <!--android:elevation="3dp"-->
-
-                <TextView
-                    android:layout_marginTop="100dp"
-                    android:layout_marginBottom="20dp"
-                    android:id="@+id/word"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="throne"
-                    android:gravity="center"
-                    android:textSize="20pt" />
-                <TextView
-                    android:id="@+id/sentence"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="15dp"
-                    android:fontFamily="Microsoft YaHei Light"
-                    android:text="The young king was uneasy on the throne."/>
-            </LinearLayout>
-
-            <!--</RelativeLayout>-->
-
-        </com.example.a50.vocabulary.RefreshLayout>
-
-        <com.example.a50.vocabulary.RefreshLayout
-            android:background="@drawable/shadow"
-            android:layout_width="250dp"
-            android:id="@+id/wordCardCh"
-            android:layout_centerInParent="true"
-            android:visibility="gone"
-            android:layout_height="350dp">
-
-            <!--解释界面-->
-            <LinearLayout
-                android:layout_centerHorizontal="true"
-                android:layout_width="250dp"
-                android:layout_height="350dp"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginTop="100dp"
-                    android:layout_marginBottom="20dp"
-                    android:id="@+id/translate"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="n. 铁王座；君主；王权
-                vi. 登上王座"
-                    android:textSize="8pt" />
-                <TextView
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="15dp"
-                    android:fontFamily="Microsoft YaHei Light"
-                    android:text="The young king was uneasy on the throne."/>
-            </LinearLayout>
-        </com.example.a50.vocabulary.RefreshLayout>
-
-    </RelativeLayout>
+            <!--android:id="@+id/wordCardEn"-->
+            <!--&gt;-->
 
 
+            <!--&lt;!&ndash;<RelativeLayout&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/index"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_centerInParent="true"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_marginTop="15dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_below="@id/RememberTitle"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:background="@drawable/shadow">&ndash;&gt;-->
 
+            <!--&lt;!&ndash;英语单词&ndash;&gt;-->
+            <!--<LinearLayout-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:visibility="visible"-->
+                <!--android:layout_width="250dp"-->
+                <!--android:layout_height="350dp"-->
+                <!--android:orientation="vertical">-->
 
+                <!--&lt;!&ndash;android:elevation="3dp"&ndash;&gt;-->
 
+                <!--<TextView-->
+                    <!--android:layout_marginTop="100dp"-->
+                    <!--android:layout_marginBottom="20dp"-->
+                    <!--android:id="@+id/word"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="throne"-->
+                    <!--android:gravity="center"-->
+                    <!--android:textSize="20pt" />-->
+                <!--<TextView-->
+                    <!--android:id="@+id/sentence"-->
+                    <!--android:layout_marginLeft="15dp"-->
+                    <!--android:layout_marginRight="15dp"-->
+                    <!--android:layout_marginTop="20dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textSize="15dp"-->
+                    <!--android:fontFamily="Microsoft YaHei Light"-->
+                    <!--android:text="The young king was uneasy on the throne."/>-->
+            <!--</LinearLayout>-->
+
+            <!--&lt;!&ndash;</RelativeLayout>&ndash;&gt;-->
+
+        <!--</com.example.a50.vocabulary.RefreshLayout>-->
+
+        <!--<com.example.a50.vocabulary.RefreshLayout-->
+            <!--android:background="@drawable/shadow"-->
+            <!--android:layout_width="250dp"-->
+            <!--android:id="@+id/wordCardCh"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:visibility="gone"-->
+            <!--android:layout_height="350dp">-->
+
+            <!--&lt;!&ndash;解释界面&ndash;&gt;-->
+            <!--<LinearLayout-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_width="250dp"-->
+                <!--android:layout_height="350dp"-->
+                <!--android:orientation="vertical">-->
+                <!--<TextView-->
+                    <!--android:layout_marginLeft="15dp"-->
+                    <!--android:layout_marginRight="15dp"-->
+                    <!--android:layout_marginTop="100dp"-->
+                    <!--android:layout_marginBottom="20dp"-->
+                    <!--android:id="@+id/translate"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="n. 铁王座；君主；王权-->
+                <!--vi. 登上王座"-->
+                    <!--android:textSize="8pt" />-->
+                <!--<TextView-->
+                    <!--android:layout_marginLeft="15dp"-->
+                    <!--android:layout_marginRight="15dp"-->
+                    <!--android:layout_marginTop="20dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textSize="15dp"-->
+                    <!--android:fontFamily="Microsoft YaHei Light"-->
+                    <!--android:text="The young king was uneasy on the throne."/>-->
+            <!--</LinearLayout>-->
+        <!--</com.example.a50.vocabulary.RefreshLayout>-->
+
+    <!--</RelativeLayout>-->
 
     <TextView
         android:layout_marginTop="25dp"
@@ -122,6 +142,7 @@
         android:fontFamily="Microsoft YaHei Light"
         android:layout_marginBottom="15dp"
         />
+
 
 
 
